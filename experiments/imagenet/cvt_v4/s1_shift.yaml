@@ -1,0 +1,5 @@
+BASE: ['s1.yaml']
+MODEL:
+  NAME: cls_cvt_v4
+  SPEC:
+    SHIFT: [True, True, True, True]

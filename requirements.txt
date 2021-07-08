@@ -1,0 +1,12 @@
+opencv-python
+pyyaml
+json_tricks
+tensorboardX==2.0
+yacs
+pycocotools
+scikit-learn
+tensorwatch
+pandas
+timm==0.3.2
+numpy==1.19.3
+einops

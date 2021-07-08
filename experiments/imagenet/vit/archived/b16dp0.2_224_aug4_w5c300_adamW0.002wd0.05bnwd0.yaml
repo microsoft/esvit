@@ -1,0 +1,5 @@
+BASE: ['b16_224_aug4_w5c300_adamW0.002wd0.05bnwd0.yaml']
+MODEL:
+  SPEC:
+    ATTN_DROP_RATE: 0.2
+    DROP_RATE: 0.2

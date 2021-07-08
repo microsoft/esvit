@@ -1,0 +1,4 @@
+BASE: ['small.yaml']
+MODEL:
+  SPEC:
+    PRE_NORM: False

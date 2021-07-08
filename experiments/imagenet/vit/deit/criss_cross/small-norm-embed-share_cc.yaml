@@ -1,0 +1,12 @@
+BASE: ['small-norm-embed-cc.yaml']
+MODEL:
+  SPEC:
+    USE_CC_ATTN:
+      ENABLED: True
+      WITH_INTER_NORM: True
+      WITH_RESIDUAL: True
+      WITH_INTER_PROJ: True
+      SHARE_QKV: True
+      SHARE_NORM: True
+      SHARE_PROJ: True
+

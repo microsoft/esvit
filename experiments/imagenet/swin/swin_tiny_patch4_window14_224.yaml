@@ -1,0 +1,77 @@
+OUTPUT_DIR: 'OUTPUT/'
+WORKERS: 6
+PRINT_FREQ: 500
+AMP:
+  ENABLED: true
+
+MODEL:
+  NAME: swin_transformer
+  SPEC:
+    PATCH_SIZE: 4
+    DIM_EMBED: 96
+    DEPTHS: [ 2, 2, 6, 2 ]
+    NUM_HEADS: [ 3, 6, 12, 24 ]
+    WINDOW_SIZE: 14
+    MLP_RATIO: 4
+    QKV_BIAS: True
+    DROP_RATE: 0
+    ATTN_DROP_RATE: 0
+    DROP_PATH_RATE: 0.1
+    USE_APE: False
+    PATCH_NORM: True
+AUG:
+  MIXUP_PROB: 1.0
+  MIXUP: 0.8
+  MIXCUT: 1.0
+  TIMM_AUG:
+    USE_LOADER: true
+    RE_COUNT: 1
+    RE_MODE: pixel
+    RE_SPLIT: false
+    RE_PROB: 0.25
+    AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+    HFLIP: 0.5
+    VFLIP: 0.0
+    COLOR_JITTER: 0.4
+    INTERPOLATION: bicubic
+LOSS:
+  LABEL_SMOOTHING: 0.1
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+DATASET:
+  DATASET: 'imagenet'
+  DATA_FORMAT: 'tsv'
+  ROOT: 'DATASET/imagenet-tsv/'
+  TEST_SET: 'val'
+  TRAIN_SET: 'train'
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+  IMAGE_SIZE: [ 224, 224 ]
+  MODEL_FILE: ''
+  INTERPOLATION: 3
+TRAIN:
+  BATCH_SIZE_PER_GPU: 256
+  LR: 5e-4
+  IMAGE_SIZE: [ 224, 224 ]
+  BEGIN_EPOCH: 0
+  END_EPOCH: 300
+  LR_SCHEDULER:
+    METHOD: 'timm'
+    ARGS:
+      sched: 'cosine'
+      warmup_epochs: 5
+      warmup_lr: 5e-7
+      min_lr: 5e-6
+      cooldown_epochs: 10
+      decay_rate: 0.1
+  OPTIMIZER: adamW
+  WD: 0.05
+  CLIP_GRAD_NORM: 5.0
+  WITHOUT_WD_LIST: [ 'bn', 'bias', 'ln' ]
+  MOMENTUM: 0.9
+  NESTEROV: true
+  SHUFFLE: true
+DEBUG:
+  DEBUG: false

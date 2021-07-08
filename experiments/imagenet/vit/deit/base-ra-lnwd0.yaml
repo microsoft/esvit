@@ -1,0 +1,4 @@
+BASE: ['base-ra.yaml']
+
+TRAIN:
+  WITHOUT_WD_LIST: ['bn', 'bias', 'ln']

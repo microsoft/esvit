@@ -1,0 +1,4 @@
+BASE: ['s16_224_aug4_w5c300_adamW0.003wd0.05bnwd0.yaml']
+MODEL:
+  SPEC:
+    USE_CLS_TOKEN: False

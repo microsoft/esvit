@@ -1,0 +1,6 @@
+BASE: ['s16_224_aug1_w5c300_adam0.003wd0.3.yaml']
+AUG:
+  MIXCUT: 1.0
+TRAIN:
+  OPTIMIZER: adamW
+  WD: 0.03

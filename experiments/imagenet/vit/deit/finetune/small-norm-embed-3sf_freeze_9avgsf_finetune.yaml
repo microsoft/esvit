@@ -1,0 +1,49 @@
+BASE: ['../small.yaml']
+MODEL:
+  NAME: cls_vit
+  NUM_CLASSES: 1000
+  SPEC:
+    PATCH_SIZE: 16
+    EMBED_DIM: 384
+    NORM_EMBED: True
+    NUM_HEADS: 6
+    DEPTH: 12
+    MLP_RATIO: [4.0]
+    ATTN_DROP_RATE: 0.0
+    DROP_RATE: 0.0
+    DROP_PATH_RATE: 0.1
+    QKV_BIAS: True
+    USE_CLS_TOKEN: True
+    USE_AVG_ATT: [4,5,6, 7,8, 9, 10, 11, 12]
+  PRETRAINED: ''
+  PRETRAINED_LAYERS:
+    - patch_embed
+    - norm_embed
+    - pos_embed
+    - cls_token
+    - blocks
+    - norm
+    - head
+TRAIN:
+  BATCH_SIZE_PER_GPU: 512
+  LR: 0.00025
+  BEGIN_EPOCH: 0
+  END_EPOCH: 100
+  LR_SCHEDULER:
+    METHOD: 'timm'
+    ARGS:
+      sched: 'cosine'
+      warmup_epochs: 0
+FINETUNE:
+  FINETUNE: true
+  EVAL_EVERY: 2000
+  BASE_LR: 0.03
+  FROZEN_LAYERS:
+    - patch_embed
+    - norm_embed
+    - pos_embed
+    - cls_token
+    - blocks.0
+    - blocks.1
+    - blocks.2
+

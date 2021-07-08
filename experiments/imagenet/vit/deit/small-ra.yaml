@@ -1,0 +1,7 @@
+BASE: ['small.yaml']
+AUG:
+  TIMM_AUG:
+    USE_LOADER: False
+    USE_TRANSFORM: True
+TRAIN:
+  SAMPLER: 'repeated_aug'

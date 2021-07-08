@@ -1,0 +1,5 @@
+BASE: ['s16_224_aug4_w5c300_adam0.003wd0.3bnwd0.yaml']
+TRAIN:
+  OPTIMIZER: adamW
+  LR: 0.003
+  WD: 0.05

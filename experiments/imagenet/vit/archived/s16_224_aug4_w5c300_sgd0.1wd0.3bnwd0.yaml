@@ -1,0 +1,7 @@
+BASE: ['s16_224_aug4_w5c300_adam0.003wd0.3bnwd0.yaml']
+TRAIN:
+  OPTIMIZER: sgd
+  LR: 0.1
+  WD: 0.3
+  MOMENTUM: 0.9
+  NESTEROV: true

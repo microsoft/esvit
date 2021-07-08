@@ -1,0 +1,5 @@
+BASE: ['s3_w14.yaml']
+MODEL:
+  NAME: cls_cvt_v4
+  SPEC:
+    REL_POS_EMBED: True

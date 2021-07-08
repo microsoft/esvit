@@ -1,0 +1,3 @@
+BASE: ['s16_224_aug4_w5c300_adam0.003wd0.3.yaml']
+TRAIN:
+  WD: 0.0

@@ -1,0 +1,10 @@
+BASE: ['small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True
+    USE_GROUP_FFN:
+      ENABLED: True
+      SHUFFLE: True
+      WITH_PROJ: True
+      WITH_RES: True
+      GROUPS: 3

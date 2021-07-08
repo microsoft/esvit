@@ -1,0 +1,14 @@
+BASE: ['s3_rpe.yaml']
+TRAIN:
+  BATCH_SIZE_PER_GPU: 256
+  LR: 0.000125
+  LR_SCHEDULER:
+    METHOD: 'timm'
+    ARGS:
+      sched: 'cosine'
+      warmup_epochs: 5
+      warmup_lr: 0.000001
+      min_lr: 0.000001
+      cooldown_epochs: 10
+      decay_rate: 0.1
+  WD: 0.1

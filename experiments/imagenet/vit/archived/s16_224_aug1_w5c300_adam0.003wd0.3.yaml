@@ -1,0 +1,46 @@
+OUTPUT_DIR: 'OUTPUT/'
+WORKERS: 6
+PRINT_FREQ: 100
+AMP:
+  ENABLED: True
+
+MODEL:
+  NAME: cls_vit
+  SPEC:
+    PATCH_SIZE: 16
+    EMBED_DIM: 768
+    NUM_HEADS: 8
+    DEPTH: 8
+    MLP_RATIO: 3.0
+    ATTN_DROP_RATE: 0.1
+    DROP_RATE: 0.1
+    DROP_PATH_RATE: 0.0
+    QKV_BIAS: False
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+DATASET:
+  DATASET: 'imagenet'
+  DATA_FORMAT: 'tsv'
+  ROOT: 'DATASET/imagenet-tsv/'
+  TEST_SET: 'val'
+  TRAIN_SET: 'train'
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+  IMAGE_SIZE: [224, 224]
+  MODEL_FILE: ''
+TRAIN:
+  BATCH_SIZE_PER_GPU: 256
+  IMAGE_SIZE: [224, 224]
+  BEGIN_EPOCH: 0
+  END_EPOCH: 300
+  LR_SCHEDULER:
+    METHOD: 'WarmupCosine'
+    WARMUP_EPOCH: 5
+  OPTIMIZER: adam
+  LR: 0.003
+  WD: 0.3
+  SHUFFLE: true
+DEBUG:
+  DEBUG: false

@@ -1,0 +1,5 @@
+BASE: ['../small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True
+    MLP_RATIO: [1.0]

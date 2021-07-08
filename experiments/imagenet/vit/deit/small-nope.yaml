@@ -1,0 +1,15 @@
+BASE: ['small.yaml']
+MODEL:
+  NAME: cls_vit
+  SPEC:
+    PATCH_SIZE: 16
+    EMBED_DIM: 384
+    NUM_HEADS: 6
+    DEPTH: 12
+    MLP_RATIO: 4.0
+    ATTN_DROP_RATE: 0.0
+    DROP_RATE: 0.0
+    DROP_PATH_RATE: 0.1
+    QKV_BIAS: True
+    USE_CLS_TOKEN: True
+    POS_EMBED: False

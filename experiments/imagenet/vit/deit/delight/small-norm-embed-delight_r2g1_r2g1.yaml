@@ -1,0 +1,11 @@
+BASE: ['../small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True
+    USE_DELIGHT_BLOCK:
+      ENABLED: True
+      MLP1_RATIO: 2.0
+      MLP2_RATIO: 2.0
+      MLP1_GROUP: 1
+      MLP2_GROUP: 1
+      SHUFFLE: True

@@ -1,0 +1,82 @@
+OUTPUT_DIR: 'OUTPUT/'
+WORKERS: 6
+PRINT_FREQ: 500
+AMP:
+  ENABLED: true
+
+MODEL:
+  NAME: vision_longformer
+  SPEC:
+    AVG_POOL: False
+    DROP: 0.0
+    DROP_PATH: 0.1
+    NORM_EMBED: True
+    MSVIT:
+      ARCH: 'l1,h3,d96,n1,s1,g1,p4,f7_l2,h3,d192,n2,s1,g1,p2,f7_l3,h6,d384,n8,s0,g1,p2,f7_l4,h12,d768,n1,s0,g0,p2,f7'
+      LN_EPS: 1e-06
+      SHARE_W: True
+      ATTN_TYPE: 'longformerhand'
+      SHARE_KV: True
+      ONLY_GLOBAL: False
+      SW_EXACT: 0
+      MODE: 0
+      VIL_MODE_SWITCH: 0.5
+      POOL_METHOD: None
+      WITH_SE: None
+      SE_MLP_RATIO: 0.0625
+      SE_MLP_BALANCE: False
+AUG:
+  MIXUP_PROB: 1.0
+  MIXUP: 0.8
+  MIXCUT: 1.0
+  TIMM_AUG:
+    USE_LOADER: true
+    RE_COUNT: 1
+    RE_MODE: pixel
+    RE_SPLIT: false
+    RE_PROB: 0.25
+    AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+    HFLIP: 0.5
+    VFLIP: 0.0
+    COLOR_JITTER: 0.4
+    INTERPOLATION: bicubic
+LOSS:
+  LABEL_SMOOTHING: 0.1
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+DATASET:
+  DATASET: 'imagenet'
+  DATA_FORMAT: 'tsv'
+  ROOT: 'DATASET/imagenet-tsv/'
+  TEST_SET: 'val'
+  TRAIN_SET: 'train'
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+  IMAGE_SIZE: [224, 224]
+  MODEL_FILE: ''
+  INTERPOLATION: 3
+TRAIN:
+  BATCH_SIZE_PER_GPU: 256
+  LR: 0.00025
+  IMAGE_SIZE: [224, 224]
+  BEGIN_EPOCH: 0
+  END_EPOCH: 300
+  LR_SCHEDULER:
+    METHOD: 'timm'
+    ARGS:
+      sched: 'cosine'
+      warmup_epochs: 5
+      warmup_lr: 0.000001
+      min_lr: 0.000001
+      cooldown_epochs: 10
+      decay_rate: 0.1
+  OPTIMIZER: adamW
+  WD: 0.1
+  WITHOUT_WD_LIST: []
+  MOMENTUM: 0.9
+  NESTEROV: true
+  SHUFFLE: true
+DEBUG:
+  DEBUG: false

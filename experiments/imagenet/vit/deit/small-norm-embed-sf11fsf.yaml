@@ -1,0 +1,6 @@
+BASE: ['small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True
+    HAS_ATTN: [True,False,False,False,False,False,False,False,False,False,False, True]
+    HAS_FFN: [True, True, True, True, True, True, True, True, True, True, True, True]

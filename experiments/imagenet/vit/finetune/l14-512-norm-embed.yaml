@@ -1,0 +1,7 @@
+BASE: ['l14-norm-embed.yaml']
+TEST:
+  BATCH_SIZE_PER_GPU: 2
+  IMAGE_SIZE: [512, 512]
+TRAIN:
+  BATCH_SIZE_PER_GPU: 2
+  IMAGE_SIZE: [512, 512]

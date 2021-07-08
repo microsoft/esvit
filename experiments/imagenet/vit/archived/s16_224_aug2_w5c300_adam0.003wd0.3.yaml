@@ -1,0 +1,3 @@
+BASE: ['s16_224_aug1_w5c300_adam0.003wd0.3.yaml']
+AUG:
+  MIXUP: 0.2

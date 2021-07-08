@@ -1,0 +1,4 @@
+BASE: ['small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True

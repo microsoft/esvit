@@ -1,0 +1,4 @@
+BASE: ['small-post-norm.yaml']
+MODEL:
+  SPEC:
+    RES_SCORE: True

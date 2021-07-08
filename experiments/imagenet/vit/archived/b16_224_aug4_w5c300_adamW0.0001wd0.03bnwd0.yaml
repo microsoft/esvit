@@ -1,0 +1,3 @@
+BASE: ['b16_224_aug4_w5c300_adamW0.003wd0.03bnwd0.yaml']
+TRAIN:
+  LR: 0.0001

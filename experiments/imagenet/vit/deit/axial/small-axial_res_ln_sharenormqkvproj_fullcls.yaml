@@ -1,0 +1,12 @@
+BASE: ['small-axial_res_ln.yaml']
+MODEL:
+  SPEC:
+    USE_AXIAL_ATTN:
+      ENABLED: True
+      WITH_INTER_PROJ: True
+      SHARE_QKV: True
+      USE_FULL_ATTN_FOR_CLS: True
+      WITH_RESIDUAL: True
+      WITH_INTER_NORM: True
+      SHARE_NORM: True
+      SHARE_PROJ: True

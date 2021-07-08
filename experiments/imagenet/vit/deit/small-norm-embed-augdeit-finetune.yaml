@@ -1,0 +1,73 @@
+OUTPUT_DIR: 'OUTPUT/'
+WORKERS: 6
+PRINT_FREQ: 100
+AMP:
+  ENABLED: True
+
+AUG:
+  MIXUP_PROB: 1.0
+  MIXUP: 0.8
+  MIXCUT: 1.0
+  TIMM_AUG:
+    USE_LOADER: true
+    RE_COUNT: 1
+    RE_MODE: pixel
+    RE_SPLIT: false
+    RE_PROB: 0.25
+    AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+    HFLIP: 0.5
+    VFLIP: 0.0
+    COLOR_JITTER: 0.4
+    INTERPOLATION: bicubic
+LOSS:
+  LABEL_SMOOTHING: 0.1
+MODEL:
+  NAME: cls_vit
+  NUM_CLASSES: 1000
+  SPEC:
+    PATCH_SIZE: 16
+    EMBED_DIM: 384
+    NORM_EMBED: True
+    NUM_HEADS: 6
+    DEPTH: 12
+    MLP_RATIO: 4.0
+    ATTN_DROP_RATE: 0.0
+    DROP_RATE: 0.0
+    DROP_PATH_RATE: 0.1
+    QKV_BIAS: True
+    USE_CLS_TOKEN: True
+  PRETRAINED: ''
+  PRETRAINED_LAYERS:
+    - patch_embed
+    - norm_embed
+    - pos_embed
+    - cls_token
+    - blocks
+DATASET:
+  DATASET: 'imagenet'
+  DATA_FORMAT: 'tsv'
+  ROOT: 'DATASET/imagenet-tsv/'
+  TEST_SET: 'val'
+  TRAIN_SET: 'train'
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+  IMAGE_SIZE: [384, 384]
+  CENTER_CROP: False
+  MODEL_FILE: ''
+TRAIN:
+  BATCH_SIZE_PER_GPU: 32
+  IMAGE_SIZE: [384, 384]
+  LR_SCHEDULER:
+    METHOD: 'BitHyperRule'
+  OPTIMIZER: sgd
+  WD: 0.0
+  WITHOUT_WD_LIST: ['bn', 'bias']
+  MOMENTUM: 0.9
+  NESTEROV: true
+  SHUFFLE: true
+FINETUNE:
+  FINETUNE: true
+  EVAL_EVERY: 2000
+  BASE_LR: 0.01
+DEBUG:
+  DEBUG: false

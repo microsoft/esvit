@@ -1,0 +1,5 @@
+BASE: ['s1.yaml']
+MODEL:
+  NAME: cvt_v4_transformer
+  SPEC:
+    REL_POS_EMBED: True

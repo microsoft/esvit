@@ -1,0 +1,5 @@
+BASE: ['s16_224_aug1_w5c300_adam0.003wd0.3.yaml']
+AUG:
+  GRAY_SCALE: 0.2
+  COLOR_JITTER: [0.4, 0.4, 0.4, 0.1, 0.8]
+  MIXCUT: 1.0

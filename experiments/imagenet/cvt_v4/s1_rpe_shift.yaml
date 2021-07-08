@@ -1,0 +1,6 @@
+BASE: ['s1.yaml']
+MODEL:
+  NAME: cls_cvt_v4
+  SPEC:
+    REL_POS_EMBED: True
+    SHIFT: [True, True, True, True]

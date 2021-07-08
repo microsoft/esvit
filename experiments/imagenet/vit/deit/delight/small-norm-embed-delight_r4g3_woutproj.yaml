@@ -1,0 +1,15 @@
+BASE: ['../small.yaml']
+MODEL:
+  SPEC:
+    NORM_EMBED: True
+    USE_DELIGHT_BLOCK:
+      ENABLED: True
+      MLP1_RATIO: 4.0
+      MLP2_RATIO: 1.0
+      MLP1_GROUP: 3
+      MLP2_GROUP: 1
+      MLP1_WITH_IN_PROJ: False
+      MLP1_WITH_PROJ: True
+      MLP2_WITH_IN_PROJ: False
+      MLP2_WITH_PROJ: False
+      SHUFFLE: True
