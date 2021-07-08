@@ -1,0 +1,19 @@
+{
+	"registrations": [
+
+		{
+			"component": {
+				"type": "git",
+				"git": {
+					"name": "dino",
+					"repositoryUrl": "https://github.com/facebookresearch/dino",
+					"commitHash": "58aabc09e056689228e5cfff27c2c20e6d19c945"
+				}
+			},
+			"license": "Apache 2.0",
+			"version": "0.1",
+			"description": "PyTorch code for Vision Transformers training with the Self-Supervised learning method DINO"
+		}
+	],
+	"version": 1
+}
