@@ -264,7 +264,7 @@ If you find this repository useful, please consider giving a star :star:   and c
 
 #### Related Projects/Codebase
 
-[[Swin Transformers](https://github.com/microsoft/Swin-Transformer)]  [[Vision Longformer](https://github.com/microsoft/vision-longformer)]  [[Convolutional vision Transformers (CvT)](https://github.com/microsoft/CvT)]  [[Focal Transformers](https://arxiv.org/abs/2107.00641)]
+[[Swin Transformers](https://github.com/microsoft/Swin-Transformer)]  [[Vision Longformer](https://github.com/microsoft/vision-longformer)]  [[Convolutional vision Transformers (CvT)](https://github.com/microsoft/CvT)]  [[Focal Transformers](https://github.com/microsoft/Focal-Transformer)]
 
 #### Acknowledgement 
 Our implementation is built partly upon packages: [[Dino](https://github.com/facebookresearch/dino)]  [[Timm](https://github.com/rwightman/pytorch-image-models)]
