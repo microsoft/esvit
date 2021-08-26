@@ -30,6 +30,16 @@ You can download the full checkpoint (trained with both view-level and region-le
     <th colspan="3">logs</th>
   </tr>
   <tr>
+    <td>ResNet-50</td>
+    <td>23M</td>
+    <td>75.7%</td>
+    <td>71.3%</td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/resnet/resnet50/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/resume_from_ckpt0200/checkpoint.pth">full ckpt</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/resnet/resnet50/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/resume_from_ckpt0200/log.txt">train</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/resnet/resnet50/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/resume_from_ckpt0200/lincls/epoch_last/lr0.01/log.txt">linear</a></td> 
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/resnet/resnet50/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/resume_from_ckpt0200/features/epoch0300/log.txt">knn</a></td>    
+  </tr>  
+  <tr>
     <td>EsViT (Swin-T, W=7)</td>
     <td>28M</td>
     <td>78.0%</td>
