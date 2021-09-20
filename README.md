@@ -20,6 +20,8 @@ Figure: Efficiency vs accuracy comparison under the linear classification protoc
 ## Pretrained models
 You can download the full checkpoint (trained with both view-level and region-level tasks, batch size=512 and ImageNet-1K.), which contains backbone and projection head weights for both student and teacher networks. 
 
+- EsViT (Swin) with network configurations of increased model capacities, pre-trained with both view-level and region-level tasks. ResNet-50 trained with both tasks is shown as a reference.
+
 <table>
   <tr>
     <th>arch</th>
@@ -107,7 +109,7 @@ You can download the full checkpoint (trained with both view-level and region-le
 </table>
 
 
-EsViT (Swin-T, W=7) with different pre-train datasets (view-level task only)
+- EsViT (Swin-T, W=7) with different pre-train datasets (view-level task only)
 
 <table>
   <tr>
@@ -183,6 +185,72 @@ EsViT (Swin-T, W=7) with different pre-train datasets (view-level task only)
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug_window7_imagenet22k_debug/features/epoch0030/log.txt">knn</a></td>   
   </tr>  
 </table>
+
+
+- EsViT with more multi-stage vision Transformer architectures, pre-trained with **V**iew-level and **R**egion-level tasks.
+
+<table>
+  <tr>
+    <th>arch</th>
+    <th>params</th>
+    <th>pre-train task</th>
+    <th>linear</th>
+    <th>k-nn</th>
+    <th colspan="1">download</th>
+    <th colspan="3">logs</th>
+  </tr>
+
+  <tr>
+    <td>EsViT (ViL, W=7)</td>
+    <td>28M</td>
+    <td>V</td>
+    <td>77.3%</td>
+    <td>73.9%</td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs32_multicrop_epoch300/vil_mode0/checkpoint.pth">full ckpt</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs32_multicrop_epoch300/vil_mode0/log.txt">train</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs64_multicrop_epoch300/lincls/epoch0300/4_last_blocks/log.txt">linear</a></td> 
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs32_multicrop_epoch300/vil_mode0/features/epoch300/log.txt">knn</a></td>       
+    
+    
+    
+  <tr>
+    <td>EsViT (ViL, W=7)</td>
+    <td>28M</td>
+    <td>V+R</td>
+    <td>77.5%</td>
+    <td>74.5%</td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs64_multicrop_epoch300/continued_from0200_dense/checkpoint.pth">full ckpt</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs64_multicrop_epoch300/continued_from0200_dense/log.txt">train</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs64_multicrop_epoch300/continued_from0200_dense/log.txt">linear</a></td> 
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/vil/vil_2262/bl_lr0.0005_gpu16_bs64_multicrop_epoch300/continued_from0200_dense/features/epoch300/log.txt">knn</a></td>       
+  </tr>
+  
+
+  
+  <tr>
+    <td>EsViT (CvT, W=7)</td>
+    <td>29M</td>
+    <td>V</td>
+    <td>77.6%</td>
+    <td>74.8%</td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/checkpoint.pth">full ckpt</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/log.txt">train</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/lincls/epoch0300/log.txt">linear</a></td> 
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/features/epoch300/log.txt">knn</a></td>      
+  </tr>
+  <tr>
+    <td>EsViT (CvT, W=7)</td>
+    <td>29M</td>
+    <td>V+R</td>
+    <td>78.5%</td>
+    <td>76.7%</td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/continued_from0200_dense/checkpoint.pth">full ckpt</a></td>  
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/continued_from0200_dense/log.txt">train</a></td>
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/continued_from0200_dense/lincls/epoch0300/log.txt">linear</a></td> 
+    <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/cvt/cvt_tiny/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/continued_from0200_dense/features/epoch300/log.txt">knn</a></td>       
+  </tr>  
+</table>
+
 
 ## Pre-training
 
