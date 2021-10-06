@@ -297,7 +297,7 @@ class SwinTransformerBlock(nn.Module):
             if H is self.attn_mask_dict.keys():
                 attn_mask = self.attn_mask_dict[H]
             else:
-                self.attn_mask_dict[H] = self.create_attn_mask(self.H, self.W).to(x.device)
+                self.attn_mask_dict[H] = self.create_attn_mask(H, W).to(x.device)
                 attn_mask = self.attn_mask_dict[H]
 
         else:
