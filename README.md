@@ -2,7 +2,7 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/efficient-self-supervised-vision-transformers/self-supervised-image-classification-on)](https://paperswithcode.com/sota/self-supervised-image-classification-on?p=efficient-self-supervised-vision-transformers)
 
-[[Paper]](https://arxiv.org/abs/2106.09785) [[Slides]](http://chunyuan.li/doc/esvit_talk_chunyl.pdf)
+[[Paper]](https://arxiv.org/abs/2106.09785) [[Slides]](http://chunyuan.li/assets/pdf/esvit_talk_chunyl.pdf)
 
 PyTorch implementation for [EsViT](https://arxiv.org/abs/2106.09785), built with two techniques: 
 
