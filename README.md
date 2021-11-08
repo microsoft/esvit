@@ -28,6 +28,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <th>arch</th>
     <th>params</th>
+    <th>pre-train task</th>
     <th>linear</th>
     <th>k-nn</th>
     <th colspan="1">download</th>
@@ -36,6 +37,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>ResNet-50</td>
     <td>23M</td>
+    <td>V+L</td>
     <td>75.7%</td>
     <td>71.3%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/resnet/resnet50/bl_lr0.0005_gpu16_bs64_multicrop_epoch300_dino_aug/resume_from_ckpt0200/checkpoint.pth">full ckpt</a></td>
@@ -46,6 +48,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-T, W=7)</td>
     <td>28M</td>
+    <td>V+L</td>
     <td>78.0%</td>
     <td>75.7%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_tiny/bl_lr0.0005_gpu16_bs32_dense_multicrop_epoch300/checkpoint_best.pth">full ckpt</a></td>
@@ -56,6 +59,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-S, W=7)</td>
     <td>49M</td>
+    <td>V+L</td>
     <td>79.5%</td>
     <td>77.7%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_small/bl_lr0.0005_gpu16_bs32_dense_multicrop_epoch300/checkpoint_best.pth">full ckpt</a></td>
@@ -66,6 +70,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-B, W=7)</td>
     <td>87M</td>
+    <td>V+L</td>
     <td>80.4%</td>
     <td>78.9%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_base/bl_lr0.0005_gpu16_bs32_multicrop_epoch300_dino_aug/continued_from0200_dense/checkpoint_best.pth">full ckpt</a></td>
@@ -78,6 +83,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-T, W=14)</td>
     <td>28M</td>
+    <td>V+L</td>
     <td>78.7%</td>
     <td>77.0%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_tiny/bl_lr0.0005_gpu16_bs32_multicrop_epoch300_dino_aug_window14/continued_from0200_dense/checkpoint_best.pth">full ckpt</a></td>
@@ -91,6 +97,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-S, W=14)</td>
     <td>49M</td>
+    <td>V+L</td>
     <td>80.8%</td>
     <td>79.1%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_small/bl_lr0.0005_gpu16_bs16_multicrop_epoch300_dino_aug_window14/continued_from0180_dense/checkpoint_best.pth">full ckpt</a></td>
@@ -101,6 +108,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <td>EsViT (Swin-B, W=14)</td>
     <td>87M</td>
+    <td>V+L</td>
     <td>81.3%</td>
     <td>79.3%</td>
     <td><a href="https://chunyleu.blob.core.windows.net/output/ckpts/esvit/swin/swin_base/bl_lr0.0005_nodes4_gpu16_bs8_multicrop_epoch300_dino_aug_window14_lv/continued_from_epoch0200_dense_norm_true/checkpoint_best.pth">full ckpt</a></td>  
