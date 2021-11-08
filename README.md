@@ -28,7 +28,7 @@ You can download the full checkpoint (trained with both view-level and region-le
   <tr>
     <th>arch</th>
     <th>params</th>
-    <th>pre-train task</th>
+    <th>tasks</th>
     <th>linear</th>
     <th>k-nn</th>
     <th colspan="1">download</th>
