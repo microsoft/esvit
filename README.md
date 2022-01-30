@@ -4,7 +4,7 @@
 
 [[Paper]](https://arxiv.org/abs/2106.09785) [[Slides]](http://chunyuan.li/assets/pdf/esvit_talk_chunyl.pdf)
 
-PyTorch implementation for [EsViT](https://arxiv.org/abs/2106.09785), built with two techniques: 
+PyTorch implementation for [EsViT](https://arxiv.org/abs/2106.09785) (accepted in ICLR, 2022), built with two techniques: 
 
 - A multi-stage Transformer architecture. Three multi-stage Transformer variants are implemented under the folder [`models`](./models).
 - A non-contrastive region-level matching pre-train task. The region-level matching task is implemented in function `DDINOLoss(nn.Module)`  (Line 648) in [`main_esvit.py`](./main_esvit.py). Please use `--use_dense_prediction True`, otherwise only the view-level task is used.
