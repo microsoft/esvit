@@ -395,8 +395,8 @@ If you find this repository useful, please consider giving a star :star:   and c
 @article{li2021esvit,
   title={Efficient Self-supervised Vision Transformers for Representation Learning},
   author={Li, Chunyuan and Yang, Jianwei and Zhang, Pengchuan and Gao, Mei and Xiao, Bin and Dai, Xiyang and Yuan, Lu and Gao, Jianfeng},
-  journal={arXiv preprint arXiv:2106.09785},
-  year={2021}
+  journal={International Conference on Learning Representations (ICLR)},
+  year={2022}
 }
 ```
 
