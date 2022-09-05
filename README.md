@@ -18,6 +18,14 @@ PyTorch implementation for [EsViT](https://arxiv.org/abs/2106.09785) (accepted i
 Figure: Efficiency vs accuracy comparison under the linear classification protocol on ImageNet. Left: Throughput of all SoTA SSL vision systems, circle sizes indicates model parameter counts; Right: performance over varied parameter counts for models with moderate (throughout/#parameters) ratio. Please refer Section 4.1 for details.
 
 
+## Updates
+
+* [08/19/2022] Organizing ECCV Workshop [*Computer Vision in the Wild*](https://computer-vision-in-the-wild.github.io/eccv-2022/), where the ``Image Classification in the Wild (ICinW)'' Challenge is hosted: it evaluates the zero-shot, few-shot and full-shot performance on 20 downstream image classification tasks for pre-trained vision models. More info: 
+
+$\qquad$ [ <img src="https://computer-vision-in-the-wild.github.io/eccv-2022/static/eccv2022/img/ECCV-logo3.png" width=10%/> [Workshop]](https://computer-vision-in-the-wild.github.io/eccv-2022/)    $\qquad$    [<img src="https://evalai.s3.amazonaws.com/media/logos/4e939412-a9c0-46bd-9797-5ba0bd0a9095.jpg" width=10%/> [Leaderboard] ](https://eval.ai/web/challenges/challenge-page/1832/overview)
+
+
+* [06/19/2022] Released the evaluation benchmark used in EsVIT. It contains 20 downstream image classification tasks. [[ELEVATER Benchmark]](https://computer-vision-in-the-wild.github.io/ELEVATER/) [[Toolkit]](https://github.com/Computer-Vision-in-the-Wild/Elevater_Toolkit_IC)  [[Paper]](https://arxiv.org/abs/2204.08790)
 
 ## Pretrained models
 You can download the full checkpoint (trained with both view-level and region-level tasks, batch size=512 and ImageNet-1K.), which contains backbone and projection head weights for both student and teacher networks. 
