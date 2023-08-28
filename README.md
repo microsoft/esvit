@@ -34,6 +34,14 @@ $\qquad$    [<img src="https://evalai.s3.amazonaws.com/media/logos/3a31ae6e-a990
 ## Pretrained models
 You can download the full checkpoint (trained with both view-level and region-level tasks, batch size=512 and ImageNet-1K.), which contains backbone and projection head weights for both student and teacher networks. 
 
+Note:  The data is on Azure Storage Blob, a SAS with Read permission is provided. Please append the following SAS at the end of each link to download: 
+```bash
+?sp=r&st=2023-08-28T01:36:35Z&se=3023-08-28T09:36:35Z&sv=2022-11-02&sr=c&sig=coos9vSl4Xk6S6KvqZffkVCUb7Ug%2FFR9cfyc3xacMJI%3D
+```
+
+
+
+
 - EsViT (Swin) with network configurations of increased model capacities, **pre-trained with both view-level and region-level tasks**. ResNet-50 trained with both tasks is shown as a reference.
 
 <table>
